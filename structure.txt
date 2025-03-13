@@ -1,0 +1,161 @@
+.
+├── Application
+│   ├── Application.csproj
+│   ├── appsettings.Development.json
+│   ├── appsettings.json
+│   ├── bin
+│   │   └── Debug
+│   │       └── net8.0
+│   │           ├── Application
+│   │           ├── Application.deps.json
+│   │           ├── Application.dll
+│   │           ├── Application.pdb
+│   │           ├── Application.runtimeconfig.json
+│   │           ├── appsettings.Development.json
+│   │           ├── appsettings.json
+│   │           ├── MediatR.Contracts.dll
+│   │           ├── MediatR.dll
+│   │           ├── Microsoft.AspNetCore.Cryptography.Internal.dll
+│   │           ├── Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+│   │           ├── Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+│   │           ├── Microsoft.AspNetCore.OpenApi.dll
+│   │           ├── Microsoft.EntityFrameworkCore.Abstractions.dll
+│   │           ├── Microsoft.EntityFrameworkCore.dll
+│   │           ├── Microsoft.EntityFrameworkCore.Relational.dll
+│   │           ├── Microsoft.Extensions.DependencyInjection.Abstractions.dll
+│   │           ├── Microsoft.Extensions.Identity.Core.dll
+│   │           ├── Microsoft.Extensions.Identity.Stores.dll
+│   │           ├── Microsoft.Extensions.Options.dll
+│   │           ├── Microsoft.OpenApi.dll
+│   │           ├── NetcodeHub.Packages.Extensions.Attributes.RequiredGuid.dll
+│   │           ├── Swashbuckle.AspNetCore.Swagger.dll
+│   │           ├── Swashbuckle.AspNetCore.SwaggerGen.dll
+│   │           └── Swashbuckle.AspNetCore.SwaggerUI.dll
+│   ├── DependancyInjection
+│   ├── DTO
+│   ├── Extension
+│   │   ├── DefaultClaims.cs
+│   │   ├── Identity
+│   │   │   └── ApplicationUser.cs
+│   │   └── OrderState.cs
+│   ├── obj
+│   │   ├── Application.csproj.nuget.dgspec.json
+│   │   ├── Application.csproj.nuget.g.props
+│   │   ├── Application.csproj.nuget.g.targets
+│   │   ├── Debug
+│   │   │   └── net8.0
+│   │   │       ├── apphost
+│   │   │       ├── Application.AssemblyInfo.cs
+│   │   │       ├── Application.AssemblyInfoInputs.cache
+│   │   │       ├── Application.assets.cache
+│   │   │       ├── Application.csproj.AssemblyReference.cache
+│   │   │       ├── Application.csproj.CopyComplete
+│   │   │       ├── Application.csproj.CoreCompileInputs.cache
+│   │   │       ├── Application.csproj.FileListAbsolute.txt
+│   │   │       ├── Application.dll
+│   │   │       ├── Application.GeneratedMSBuildEditorConfig.editorconfig
+│   │   │       ├── Application.genruntimeconfig.cache
+│   │   │       ├── Application.GlobalUsings.g.cs
+│   │   │       ├── Application.MvcApplicationPartsAssemblyInfo.cache
+│   │   │       ├── Application.MvcApplicationPartsAssemblyInfo.cs
+│   │   │       ├── Application.pdb
+│   │   │       ├── ref
+│   │   │       │   └── Application.dll
+│   │   │       ├── refint
+│   │   │       │   └── Application.dll
+│   │   │       ├── staticwebassets
+│   │   │       │   ├── msbuild.build.Application.props
+│   │   │       │   ├── msbuild.buildMultiTargeting.Application.props
+│   │   │       │   └── msbuild.buildTransitive.Application.props
+│   │   │       └── staticwebassets.build.json
+│   │   ├── project.assets.json
+│   │   └── project.nuget.cache
+│   ├── Program.cs
+│   ├── Properties
+│   │   ├── Interface
+│   │   └── launchSettings.json
+│   └── Service
+├── Domain
+│   ├── appsettings.Development.json
+│   ├── appsettings.json
+│   ├── Domain.csproj
+│   ├── Entities
+│   │   ├── ActivityTracker
+│   │   │   └── Tracker.cs
+│   │   ├── Orders
+│   │   └── Products
+│   ├── obj
+│   │   ├── Domain.csproj.nuget.dgspec.json
+│   │   ├── Domain.csproj.nuget.g.props
+│   │   ├── Domain.csproj.nuget.g.targets
+│   │   ├── project.assets.json
+│   │   └── project.nuget.cache
+│   ├── Program.cs
+│   └── Properties
+│       └── launchSettings.json
+├── Infrastructure
+│   ├── appsettings.Development.json
+│   ├── appsettings.json
+│   ├── bin
+│   │   └── Debug
+│   │       └── net8.0
+│   ├── DataAccess
+│   │   └── AppDbContext.cs
+│   ├── DependancyInjection
+│   │   └── ServiceContainer.cs
+│   ├── Infrastructure.csproj
+│   ├── Migrations
+│   ├── obj
+│   │   ├── Debug
+│   │   │   └── net8.0
+│   │   │       ├── Infrastructure.AssemblyInfo.cs
+│   │   │       ├── Infrastructure.AssemblyInfoInputs.cache
+│   │   │       ├── Infrastructure.assets.cache
+│   │   │       ├── Infrastructure.csproj.AssemblyReference.cache
+│   │   │       ├── Infrastructure.csproj.CoreCompileInputs.cache
+│   │   │       ├── Infrastructure.csproj.FileListAbsolute.txt
+│   │   │       ├── Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+│   │   │       ├── Infrastructure.GlobalUsings.g.cs
+│   │   │       ├── ref
+│   │   │       └── refint
+│   │   ├── Infrastructure.csproj.nuget.dgspec.json
+│   │   ├── Infrastructure.csproj.nuget.g.props
+│   │   ├── Infrastructure.csproj.nuget.g.targets
+│   │   ├── project.assets.json
+│   │   └── project.nuget.cache
+│   ├── Program.cs
+│   ├── Properties
+│   │   └── launchSettings.json
+│   └── Repository
+├── structure.txt
+└── WebUI
+    ├── appsettings.Development.json
+    ├── appsettings.json
+    ├── bin
+    │   └── Debug
+    │       └── net8.0
+    ├── Components
+    ├── Hubs
+    ├── libman.json
+    ├── obj
+    │   ├── Debug
+    │   │   └── net8.0
+    │   │       ├── ref
+    │   │       ├── refint
+    │   │       ├── WebUI.assets.cache
+    │   │       ├── WebUI.csproj.FileListAbsolute.txt
+    │   │       └── WebUI.GlobalUsings.g.cs
+    │   ├── project.assets.json
+    │   ├── project.nuget.cache
+    │   ├── WebUI.csproj.nuget.dgspec.json
+    │   ├── WebUI.csproj.nuget.g.props
+    │   └── WebUI.csproj.nuget.g.targets
+    ├── Program.cs
+    ├── Properties
+    │   └── launchSettings.json
+    ├── States
+    ├── WebUI.csproj
+    ├── WebUI.http
+    └── wwwroot
+
+53 directories, 106 files

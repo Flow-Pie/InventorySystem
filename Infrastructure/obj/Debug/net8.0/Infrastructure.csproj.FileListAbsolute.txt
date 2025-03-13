@@ -1,0 +1,5 @@
+/home/jon/Documents/InventorySystem/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
+/home/jon/Documents/InventorySystem/Infrastructure/obj/Debug/net8.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/jon/Documents/InventorySystem/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfoInputs.cache
+/home/jon/Documents/InventorySystem/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs
+/home/jon/Documents/InventorySystem/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.CoreCompileInputs.cache

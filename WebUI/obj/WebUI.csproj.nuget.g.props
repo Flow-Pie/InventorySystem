@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/home/jon/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/home/jon/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.8.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/home/jon/.nuget/packages/" />
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.themes/28.2.11/buildTransitive/Syncfusion.Blazor.Themes.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.themes/28.2.11/buildTransitive/Syncfusion.Blazor.Themes.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.core/28.2.11/buildTransitive/Syncfusion.Blazor.Core.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.core/28.2.11/buildTransitive/Syncfusion.Blazor.Core.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.spinner/28.2.11/buildTransitive/Syncfusion.Blazor.Spinner.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.spinner/28.2.11/buildTransitive/Syncfusion.Blazor.Spinner.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.buttons/28.2.11/buildTransitive/Syncfusion.Blazor.Buttons.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.buttons/28.2.11/buildTransitive/Syncfusion.Blazor.Buttons.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.popups/28.2.11/buildTransitive/Syncfusion.Blazor.Popups.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.popups/28.2.11/buildTransitive/Syncfusion.Blazor.Popups.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.splitbuttons/28.2.11/buildTransitive/Syncfusion.Blazor.SplitButtons.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.splitbuttons/28.2.11/buildTransitive/Syncfusion.Blazor.SplitButtons.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.notifications/28.2.11/buildTransitive/Syncfusion.Blazor.Notifications.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.notifications/28.2.11/buildTransitive/Syncfusion.Blazor.Notifications.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.data/28.2.11/buildTransitive/Syncfusion.Blazor.Data.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.data/28.2.11/buildTransitive/Syncfusion.Blazor.Data.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.lists/28.2.11/buildTransitive/Syncfusion.Blazor.Lists.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.lists/28.2.11/buildTransitive/Syncfusion.Blazor.Lists.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.inputs/28.2.11/buildTransitive/Syncfusion.Blazor.Inputs.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.inputs/28.2.11/buildTransitive/Syncfusion.Blazor.Inputs.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.dropdowns/28.2.11/buildTransitive/Syncfusion.Blazor.DropDowns.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.dropdowns/28.2.11/buildTransitive/Syncfusion.Blazor.DropDowns.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.navigations/28.2.11/buildTransitive/Syncfusion.Blazor.Navigations.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.navigations/28.2.11/buildTransitive/Syncfusion.Blazor.Navigations.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.calendars/28.2.11/buildTransitive/Syncfusion.Blazor.Calendars.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.calendars/28.2.11/buildTransitive/Syncfusion.Blazor.Calendars.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.grid/28.2.11/buildTransitive/Syncfusion.Blazor.Grid.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.grid/28.2.11/buildTransitive/Syncfusion.Blazor.Grid.props')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.blazor.charts/28.2.11/buildTransitive/Syncfusion.Blazor.Charts.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.charts/28.2.11/buildTransitive/Syncfusion.Blazor.Charts.props')" />
+    <Import Project="$(NuGetPackageRoot)netcodehub.packages.ui.templates.breeze/1.1.4/buildTransitive/NetcodeHub.Packages.UI.Templates.Breeze.props" Condition="Exists('$(NuGetPackageRoot)netcodehub.packages.ui.templates.breeze/1.1.4/buildTransitive/NetcodeHub.Packages.UI.Templates.Breeze.props')" />
+    <Import Project="$(NuGetPackageRoot)netcodehub.packages.components.validations/1.0.1/buildTransitive/NetcodeHub.Packages.Components.Validations.props" Condition="Exists('$(NuGetPackageRoot)netcodehub.packages.components.validations/1.0.1/buildTransitive/NetcodeHub.Packages.Components.Validations.props')" />
+    <Import Project="$(NuGetPackageRoot)netcodehub.packages.components.toast/1.0.5/buildTransitive/NetcodeHub.Packages.Components.Toast.props" Condition="Exists('$(NuGetPackageRoot)netcodehub.packages.components.toast/1.0.5/buildTransitive/NetcodeHub.Packages.Components.Toast.props')" />
+    <Import Project="$(NuGetPackageRoot)netcodehub.packages.components.modal/1.0.0/buildTransitive/NetcodeHub.Packages.Components.Modal.props" Condition="Exists('$(NuGetPackageRoot)netcodehub.packages.components.modal/1.0.0/buildTransitive/NetcodeHub.Packages.Components.Modal.props')" />
+    <Import Project="$(NuGetPackageRoot)netcodehub.packages.components.datagrid/1.0.1/buildTransitive/NetcodeHub.Packages.Components.DataGrid.props" Condition="Exists('$(NuGetPackageRoot)netcodehub.packages.components.datagrid/1.0.1/buildTransitive/NetcodeHub.Packages.Components.DataGrid.props')" />
+    <Import Project="$(NuGetPackageRoot)netcodehub.packages.components.breadcrumb/1.0.0/buildTransitive/NetcodeHub.Packages.Components.BreadCrumb.props" Condition="Exists('$(NuGetPackageRoot)netcodehub.packages.components.breadcrumb/1.0.0/buildTransitive/NetcodeHub.Packages.Components.BreadCrumb.props')" />
+    <Import Project="$(NuGetPackageRoot)mudblazor/8.3.0/buildTransitive/MudBlazor.props" Condition="Exists('$(NuGetPackageRoot)mudblazor/8.3.0/buildTransitive/MudBlazor.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.10/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.10/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design/8.0.4/build/net8.0/Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design/8.0.4/build/net8.0/Microsoft.EntityFrameworkCore.Design.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">/home/jon/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/home/jon/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/home/jon/.nuget/packages/microsoft.entityframeworkcore.tools/8.0.4</PkgMicrosoft_EntityFrameworkCore_Tools>
+  </PropertyGroup>
+</Project>
