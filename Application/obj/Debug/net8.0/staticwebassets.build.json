@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "Ee4K7z+QMe0erAzf/Epl3d7uS+cp6yJzWSmXR2jB4Cs=",
+  "Hash": "wcns6K7WcGZpikamtPKo/c94toE4fWZfXjWdcDYNTTU=",
   "Source": "Application",
   "BasePath": "_content/Application",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj",
+      "Version": 2,
+      "Source": "Domain",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

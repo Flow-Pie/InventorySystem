@@ -25,6 +25,7 @@
     <PackageReference Include="NetcodeHub.Packages.Components.Validations" Version="1.0.1" />
     <PackageReference Include="NetcodeHub.Packages.Extensions.LocalStorage" Version="1.0.0" />
     <PackageReference Include="NetcodeHub.Packages.UI.Templates.Breeze" Version="1.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="28.2.11" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="28.2.11" />
     <PackageReference Include="Syncfusion.Blazor.Navigations" Version="28.2.11" />

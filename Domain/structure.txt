@@ -1,0 +1,61 @@
+.
+├── appsettings.Development.json
+├── appsettings.json
+├── bin
+│   └── Debug
+│       └── net8.0
+│           ├── appsettings.Development.json
+│           ├── appsettings.json
+│           ├── Domain
+│           ├── Domain.deps.json
+│           ├── Domain.dll
+│           ├── Domain.pdb
+│           └── Domain.runtimeconfig.json
+├── Domain.csproj
+├── Entities
+│   ├── ActivityTracker
+│   │   └── Tracker.cs
+│   ├── Category
+│   │   └── Category.cs
+│   ├── Location
+│   │   └── Location.cs
+│   ├── Orders
+│   │   └── Order.cs
+│   └── Products
+│       └── Products.cs
+├── obj
+│   ├── Debug
+│   │   └── net8.0
+│   │       ├── apphost
+│   │       ├── Domain.AssemblyInfo.cs
+│   │       ├── Domain.AssemblyInfoInputs.cache
+│   │       ├── Domain.assets.cache
+│   │       ├── Domain.csproj.CoreCompileInputs.cache
+│   │       ├── Domain.csproj.FileListAbsolute.txt
+│   │       ├── Domain.dll
+│   │       ├── Domain.GeneratedMSBuildEditorConfig.editorconfig
+│   │       ├── Domain.genruntimeconfig.cache
+│   │       ├── Domain.GlobalUsings.g.cs
+│   │       ├── Domain.MvcApplicationPartsAssemblyInfo.cache
+│   │       ├── Domain.pdb
+│   │       ├── Domain.sourcelink.json
+│   │       ├── ref
+│   │       │   └── Domain.dll
+│   │       ├── refint
+│   │       │   └── Domain.dll
+│   │       ├── staticwebassets
+│   │       │   ├── msbuild.build.Domain.props
+│   │       │   ├── msbuild.buildMultiTargeting.Domain.props
+│   │       │   └── msbuild.buildTransitive.Domain.props
+│   │       └── staticwebassets.build.json
+│   ├── Domain.csproj.nuget.dgspec.json
+│   ├── Domain.csproj.nuget.g.props
+│   ├── Domain.csproj.nuget.g.targets
+│   ├── project.assets.json
+│   └── project.nuget.cache
+├── Program.cs
+├── Properties
+│   └── launchSettings.json
+└── structure.txt
+
+17 directories, 42 files

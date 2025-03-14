@@ -10,6 +10,7 @@
 /home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
 /home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
 /home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/Domain.MvcApplicationPartsAssemblyInfo.cache
+/home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/Domain.sourcelink.json
 /home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/staticwebassets.build.json
 /home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/staticwebassets.development.json
 /home/jon/Documents/InventorySystem/Domain/obj/Debug/net8.0/staticwebassets/msbuild.Domain.Microsoft.AspNetCore.StaticWebAssets.props
