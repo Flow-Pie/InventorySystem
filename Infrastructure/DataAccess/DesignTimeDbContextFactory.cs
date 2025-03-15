@@ -18,7 +18,7 @@ namespace Infrastructure.DataAccess
             // Configure DbContextOptions
             var builder = new DbContextOptionsBuilder<AppDbContext>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
-            builder.UseSqlServer(connectionString);
+            builder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 
             return new AppDbContext(builder.Options);
         }

@@ -5,22 +5,27 @@ using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.DataAccess;
 using Application.Extension.Identity;
 using Application.Interfaces.Identity;
-using Application.Handlers; // Add this using directive
+using Application.Handlers; 
 using MediatR;
 
 public static class ServiceContainer
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration config)
     {
-        // Register DbContext with SQL Server
+        // Register DbContext with MySQL Server
         services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
-        );
+            options.UseMySql(config.GetConnectionString("DefaultConnection"), 
+                ServerVersion.AutoDetect(config.GetConnectionString("DefaultConnection")),
+                b => b.MigrationsAssembly("Infrastructure") 
+            ));
 
         // Register DbContextFactory 
         services.AddDbContextFactory<AppDbContext>(options =>
-            options.UseSqlServer(config.GetConnectionString("DefaultConnection")),            
-            ServiceLifetime.Scoped
+            options.UseMySql(config.GetConnectionString("DefaultConnection"), 
+                ServerVersion.AutoDetect(config.GetConnectionString("DefaultConnection")),
+                b => b.MigrationsAssembly("Infrastructure") 
+            ),
+            ServiceLifetime.Scoped 
         );
 
         // Configure Authentication
