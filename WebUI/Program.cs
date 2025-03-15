@@ -6,7 +6,7 @@ using Syncfusion.Blazor;
 using Microsoft.AspNetCore.SignalR;               
 using MudBlazor.Services;                         
 using Application.DependencyInjection;            
-// using Infrastructure.DependencyInjection;         
+using Infrastructure.DependencyInjection;         
 using WebUI.States;                              
 using WebUI.Services;                             
 using WebUI.Interfaces;  

@@ -29,7 +29,40 @@
 ├── Commands
 │   └── CreateProductCommand.cs
 ├── DependancyInjection
+│   └── ServiceExtensions.cs
 ├── DTO
+│   ├── Request
+│   │   ├── ActivityTracker
+│   │   │   └── Tracker.cs
+│   │   ├── Category
+│   │   │   └── Category.cs
+│   │   ├── Identity
+│   │   │   ├── ChangeUserClaimRequestDTO.cs
+│   │   │   ├── CreateUserRequestDTO.cs
+│   │   │   ├── LoginUserRequestDTO.cs
+│   │   │   └── Policy.cs
+│   │   ├── Location
+│   │   │   └── Location.cs
+│   │   ├── Orders
+│   │   │   └── Order.cs
+│   │   └── Products
+│   │       └── Products.cs
+│   └── Response
+│       ├── ActivityTracker
+│       │   └── Tracker.cs
+│       ├── ActivityTrackerResponseDTO.cs
+│       ├── Category
+│       │   └── Category.cs
+│       ├── Identity
+│       │   ├── BaseuserClaimsDTO.cs
+│       │   └── GetUserWithClaimResponseDTO.cs
+│       ├── Location
+│       │   └── Location.cs
+│       ├── Orders
+│       │   └── Order.cs
+│       ├── Products
+│       │   └── Products.cs
+│       └── ServiceResponse.cs
 ├── Extension
 │   ├── DefaultClaims.cs
 │   ├── Identity
@@ -39,7 +72,6 @@
 │   └── CreateProductHandler.cs
 ├── Interfaces
 │   └── Identity
-│       ├── Account.cs
 │       └── IAccount.cs
 ├── obj
 │   ├── Application.csproj.nuget.dgspec.json
@@ -80,4 +112,4 @@
 ├── Services
 └── structure.txt
 
-21 directories, 60 files
+35 directories, 78 files

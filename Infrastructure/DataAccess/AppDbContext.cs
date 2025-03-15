@@ -6,6 +6,7 @@ using Domain.Entities.ActivityTracker;
 using Domain.Entities.Location;
 using Domain.Entities;
 
+
 public class AppDbContext(DbContextOptions<AppDbContext> options) : 
     IdentityDbContext<ApplicationUser>(options)
 

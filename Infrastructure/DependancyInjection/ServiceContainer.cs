@@ -7,6 +7,8 @@ using Application.Extension.Identity;
 using Application.Interfaces.Identity;
 using Application.Handlers; 
 using MediatR;
+using Infrastructure.Repository;
+
 
 public static class ServiceContainer
 {
@@ -58,7 +60,7 @@ public static class ServiceContainer
         services.AddCascadingAuthenticationState();
 
         // Register Account custom service
-        services.AddScoped<IAccount, Application.Services.Identity.Account>();
+        services.AddScoped<IAccount, Account>();
 
         // Register MediatR
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateProductHandler).Assembly));
