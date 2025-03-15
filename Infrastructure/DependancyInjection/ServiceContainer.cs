@@ -14,13 +14,12 @@ public static class ServiceContainer
     {
         // Register DbContext with SQL Server
         services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(config.GetConnectionString("DefaultConnection")),
-            ServiceLifetime.Scoped
+            options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
         );
 
-        // Register DbContextFactory (if needed)
+        // Register DbContextFactory 
         services.AddDbContextFactory<AppDbContext>(options =>
-            options.UseSqlServer(config.GetConnectionString("DefaultConnection")),
+            options.UseSqlServer(config.GetConnectionString("DefaultConnection")),            
             ServiceLifetime.Scoped
         );
 
