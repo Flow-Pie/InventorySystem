@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "MediatR/12.4.1": {
+      "MediatR/12.2.0": {
         "type": "package",
         "dependencies": {
           "MediatR.Contracts": "[2.0.1, 3.0.0)",
@@ -99,7 +99,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -244,28 +244,24 @@
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
   "libraries": {
-    "MediatR/12.4.1": {
-      "sha512": "0tLxCgEC5+r1OCuumR3sWyiVa+BMv3AgiU4+pz8xqTc+2q1WbUEXFOr7Orm96oZ9r9FsldgUtWvB2o7b9jDOaw==",
+    "MediatR/12.2.0": {
+      "sha512": "8TUFrHapKi6D74PhnSNEguRsH91HNGyP3R4ZQdgDorJgl9Wac5Prh0vA33QfrniAaS6L2xNNhc6vxzg+5AIbwA==",
       "type": "package",
-      "path": "mediatr/12.4.1",
+      "path": "mediatr/12.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
         "gradient_128x128.png",
         "lib/net6.0/MediatR.dll",
         "lib/net6.0/MediatR.xml",
         "lib/netstandard2.0/MediatR.dll",
         "lib/netstandard2.0/MediatR.xml",
-        "mediatr.12.4.1.nupkg.sha512",
+        "mediatr.12.2.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
     },
@@ -383,10 +379,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
-      "sha512": "3iE7UF7MQkCv1cxzCahz+Y/guQbTqieyxyaWKhrRO91itI9cOKO76OHeQDahqG4MmW5umr3CcCvGmK92lWNlbg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+      "sha512": "fGLiCRLMYd00JYpClraLjJTNKLmMJPnqxMaiRzEBIIvevlzxz33mXy39Lkd48hu1G+N21S7QpaO5ZzKsI6FRuA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.2",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -410,7 +406,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -658,8 +654,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Domain >= 1.0.0",
-      "MediatR >= 12.4.1",
-      "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.2",
+      "MediatR >= 12.2.0",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.1",
       "Microsoft.Extensions.Identity.Stores >= 8.0.3",
       "NetcodeHub.Packages.Extensions.Attributes.RequiredGuid >= 1.0.0"
     ]
@@ -670,11 +666,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jon/Documents/InventorySystem/Application/Application.csproj",
+      "projectUniqueName": "/home/jon/Documents/IMS/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "/home/jon/Documents/InventorySystem/Application/Application.csproj",
+      "projectPath": "/home/jon/Documents/IMS/Application/Application.csproj",
       "packagesPath": "/home/jon/.nuget/packages/",
-      "outputPath": "/home/jon/Documents/InventorySystem/Application/obj/",
+      "outputPath": "/home/jon/Documents/IMS/Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/jon/.nuget/NuGet/NuGet.Config"
@@ -689,8 +685,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/jon/Documents/InventorySystem/Domain/Domain.csproj": {
-              "projectPath": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj"
+            "/home/jon/Documents/IMS/Domain/Domain.csproj": {
+              "projectPath": "/home/jon/Documents/IMS/Domain/Domain.csproj"
             }
           }
         }
@@ -707,11 +703,11 @@
         "dependencies": {
           "MediatR": {
             "target": "Package",
-            "version": "[12.4.1, )"
+            "version": "[12.2.0, )"
           },
           "Microsoft.Extensions.DependencyInjection.Abstractions": {
             "target": "Package",
-            "version": "[8.0.2, )"
+            "version": "[8.0.1, )"
           },
           "Microsoft.Extensions.Identity.Stores": {
             "target": "Package",
@@ -734,9 +730,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

@@ -5,14 +5,13 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
   <ItemGroup>    
 
     <PackageReference Include="Mapster" Version="7.4.2-pre02" />    
 
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.13">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

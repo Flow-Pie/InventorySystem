@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using Application.DTO.Request.Entity;
 namespace Application.DTO.Request.Identity;
 
 public class CreateUserRequestDTO : LoginUserRequestDTO

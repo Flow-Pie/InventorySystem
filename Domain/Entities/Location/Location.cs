@@ -1,4 +1,4 @@
-namespace Domain.Entities.Location
+namespace Domain.Entities
 {
     public class Location
     {

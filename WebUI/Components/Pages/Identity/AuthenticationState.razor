@@ -1,0 +1,37 @@
+@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager NavManager
+@inject IAccountService accountService
+
+@code {
+    [CascadingParameter]
+    private Task<Microsoft.AspNetCore.Components.Authorization.AuthenticationState>? ClientAuthTask { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await accountService.SetUpAsync();
+
+            // Get the authentication state
+            var authState = await ClientAuthTask!;
+
+            // Access the User property (ClaimsPrincipal)
+            var user = authState.User;
+
+            // Check if the user is authenticated
+            if (user.Identity!.IsAuthenticated)
+            {
+                NavManager.NavigateTo("app/home", false, true);
+            }
+            else
+            {
+                NavManager.NavigateTo("account/login", false, true);
+            }
+        }
+        catch (Exception ex)
+        {
+            NavManager.NavigateTo("account/login", false, true);
+        }
+    }
+}

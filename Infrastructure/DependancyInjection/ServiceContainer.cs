@@ -5,10 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.DataAccess;
 using Application.Extension.Identity;
 using Application.Interfaces.Identity;
-using Application.Handlers; 
 using MediatR;
 using Infrastructure.Repository;
-
 
 public static class ServiceContainer
 {
@@ -44,17 +42,13 @@ public static class ServiceContainer
             .AddDefaultTokenProviders();
 
         // Configure Authorization Policies
-        services.AddAuthorizationBuilder()
-            .AddPolicy("AdministrationPolicy", adp =>
-            {
-                adp.RequireAuthenticatedUser();
-                adp.RequireRole("Admin", "Manager");
-            })
-            .AddPolicy("UserPolicy", adp =>
-            {
-                adp.RequireAuthenticatedUser();
-                adp.RequireRole("User");
-            });
+        services.AddAuthorization(options =>
+        {
+            options.AddPolicy("AdministrationPolicy", policy =>
+                policy.RequireAuthenticatedUser().RequireRole("Admin", "Manager"));
+            options.AddPolicy("UserPolicy", policy =>
+                policy.RequireAuthenticatedUser().RequireRole("User"));
+        });
 
         // Add Cascading Authentication State (for Blazor)
         services.AddCascadingAuthenticationState();
@@ -63,7 +57,7 @@ public static class ServiceContainer
         services.AddScoped<IAccount, Account>();
 
         // Register MediatR
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateProductHandler).Assembly));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(ServiceContainer).Assembly));
 
         return services;
     }

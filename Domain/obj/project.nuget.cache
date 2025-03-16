@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y4h3sjJ0Om4JjWCcOEvy0WDvn9ZTRoPk8CwRbvd/pC7D3X8b7a/FafbDnKBlKl6yNdiXpjWsUcTMyI7hWwbReA==",
+  "dgSpecHash": "4gMzn3+NFnnm0TfXq+9MFw8H2jGFoElRN5TsqH7DkPBg0tWUrhzcyx8NhW+/dOox09ptaUx15cNvhF+4Q+QRDg==",
   "success": true,
-  "projectFilePath": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj",
+  "projectFilePath": "/home/jon/Documents/IMS/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

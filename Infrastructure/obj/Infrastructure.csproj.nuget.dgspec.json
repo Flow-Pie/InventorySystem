@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/jon/Documents/InventorySystem/Infrastructure/Infrastructure.csproj": {}
+    "/home/jon/Documents/IMS/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/jon/Documents/InventorySystem/Application/Application.csproj": {
+    "/home/jon/Documents/IMS/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jon/Documents/InventorySystem/Application/Application.csproj",
+        "projectUniqueName": "/home/jon/Documents/IMS/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/jon/Documents/InventorySystem/Application/Application.csproj",
+        "projectPath": "/home/jon/Documents/IMS/Application/Application.csproj",
         "packagesPath": "/home/jon/.nuget/packages/",
-        "outputPath": "/home/jon/Documents/InventorySystem/Application/obj/",
+        "outputPath": "/home/jon/Documents/IMS/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jon/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/jon/Documents/InventorySystem/Domain/Domain.csproj": {
-                "projectPath": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj"
+              "/home/jon/Documents/IMS/Domain/Domain.csproj": {
+                "projectPath": "/home/jon/Documents/IMS/Domain/Domain.csproj"
               }
             }
           }
@@ -44,11 +44,11 @@
           "dependencies": {
             "MediatR": {
               "target": "Package",
-              "version": "[12.4.1, )"
+              "version": "[12.2.0, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.1, )"
             },
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
@@ -71,9 +71,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -82,14 +79,14 @@
         }
       }
     },
-    "/home/jon/Documents/InventorySystem/Domain/Domain.csproj": {
+    "/home/jon/Documents/IMS/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj",
+        "projectUniqueName": "/home/jon/Documents/IMS/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj",
+        "projectPath": "/home/jon/Documents/IMS/Domain/Domain.csproj",
         "packagesPath": "/home/jon/.nuget/packages/",
-        "outputPath": "/home/jon/Documents/InventorySystem/Domain/obj/",
+        "outputPath": "/home/jon/Documents/IMS/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jon/.nuget/NuGet/NuGet.Config"
@@ -127,9 +124,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -138,14 +132,14 @@
         }
       }
     },
-    "/home/jon/Documents/InventorySystem/Infrastructure/Infrastructure.csproj": {
+    "/home/jon/Documents/IMS/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jon/Documents/InventorySystem/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/home/jon/Documents/IMS/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/home/jon/Documents/InventorySystem/Infrastructure/Infrastructure.csproj",
+        "projectPath": "/home/jon/Documents/IMS/Infrastructure/Infrastructure.csproj",
         "packagesPath": "/home/jon/.nuget/packages/",
-        "outputPath": "/home/jon/Documents/InventorySystem/Infrastructure/obj/",
+        "outputPath": "/home/jon/Documents/IMS/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jon/.nuget/NuGet/NuGet.Config"
@@ -160,8 +154,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/jon/Documents/InventorySystem/Application/Application.csproj": {
-                "projectPath": "/home/jon/Documents/InventorySystem/Application/Application.csproj"
+              "/home/jon/Documents/IMS/Application/Application.csproj": {
+                "projectPath": "/home/jon/Documents/IMS/Application/Application.csproj"
               }
             }
           }
@@ -182,19 +176,19 @@
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.4.1, )"
+              "version": "[12.2.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.13, )"
             },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "NetcodeHub.Packages.Extensions.UnitOfWork": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[1.0.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

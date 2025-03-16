@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/jon/Documents/InventorySystem/Domain/Domain.csproj": {}
+    "/home/jon/Documents/IMS/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/home/jon/Documents/InventorySystem/Domain/Domain.csproj": {
+    "/home/jon/Documents/IMS/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj",
+        "projectUniqueName": "/home/jon/Documents/IMS/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/jon/Documents/InventorySystem/Domain/Domain.csproj",
+        "projectPath": "/home/jon/Documents/IMS/Domain/Domain.csproj",
         "packagesPath": "/home/jon/.nuget/packages/",
-        "outputPath": "/home/jon/Documents/InventorySystem/Domain/obj/",
+        "outputPath": "/home/jon/Documents/IMS/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jon/.nuget/NuGet/NuGet.Config"
@@ -49,9 +49,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

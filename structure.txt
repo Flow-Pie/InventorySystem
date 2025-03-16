@@ -1,79 +1,30 @@
 .
 ├── Application
 │   ├── Application.csproj
-│   ├── appsettings.Development.json
-│   ├── appsettings.json
 │   ├── bin
 │   │   └── Debug
 │   │       └── net8.0
-│   │           ├── Application
-│   │           ├── Application.deps.json
-│   │           ├── Application.dll
-│   │           ├── Application.pdb
-│   │           ├── Application.runtimeconfig.json
-│   │           ├── appsettings.Development.json
-│   │           ├── appsettings.json
-│   │           ├── Domain
-│   │           ├── Domain.deps.json
-│   │           ├── Domain.dll
-│   │           ├── Domain.pdb
-│   │           ├── Domain.runtimeconfig.json
-│   │           ├── MediatR.Contracts.dll
-│   │           ├── MediatR.dll
-│   │           ├── Microsoft.AspNetCore.Cryptography.Internal.dll
-│   │           ├── Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-│   │           ├── Microsoft.Extensions.DependencyInjection.Abstractions.dll
-│   │           ├── Microsoft.Extensions.Identity.Core.dll
-│   │           ├── Microsoft.Extensions.Identity.Stores.dll
-│   │           ├── Microsoft.Extensions.Options.dll
-│   │           └── NetcodeHub.Packages.Extensions.Attributes.RequiredGuid.dll
-│   ├── Commands
-│   │   └── CreateProductCommand.cs
+│   ├── Class1.cs
 │   ├── DependancyInjection
+│   │   ├── ServiceContainer.cs
 │   │   └── ServiceExtensions.cs
 │   ├── DTO
 │   │   ├── Request
-│   │   │   ├── ActivityTracker
-│   │   │   │   └── Tracker.cs
-│   │   │   ├── Category
-│   │   │   │   └── Category.cs
-│   │   │   ├── Identity
-│   │   │   │   ├── ChangeUserClaimRequestDTO.cs
-│   │   │   │   ├── CreateUserRequestDTO.cs
-│   │   │   │   ├── LoginUserRequestDTO.cs
-│   │   │   │   └── Policy.cs
-│   │   │   ├── Location
-│   │   │   │   └── Location.cs
-│   │   │   ├── Orders
-│   │   │   │   └── Order.cs
-│   │   │   └── Products
-│   │   │       └── Products.cs
+│   │   │   └── Identity
+│   │   │       ├── ChangeUserClaimRequestDTO.cs
+│   │   │       ├── CreateUserRequestDTO.cs
+│   │   │       ├── LoginUserRequestDTO.cs
+│   │   │       └── Policy.cs
 │   │   └── Response
-│   │       ├── ActivityTracker
-│   │       │   └── Tracker.cs
-│   │       ├── ActivityTrackerResponseDTO.cs
-│   │       ├── Category
-│   │       │   └── Category.cs
 │   │       ├── Identity
 │   │       │   ├── BaseuserClaimsDTO.cs
 │   │       │   └── GetUserWithClaimResponseDTO.cs
-│   │       ├── Location
-│   │       │   └── Location.cs
-│   │       ├── Orders
-│   │       │   └── Order.cs
-│   │       ├── Products
-│   │       │   └── Products.cs
 │   │       └── ServiceResponse.cs
-│   ├── Extension
-│   │   ├── DefaultClaims.cs
-│   │   ├── Identity
-│   │   │   └── ApplicationUser.cs
-│   │   └── OrderState.cs
-│   ├── Handlers
-│   │   └── CreateProductHandler.cs
+│   ├── Extensions
+│   │   └── identity
+│   │       └── ApplicationUser.cs
 │   ├── Interfaces
-│   │   └── Identity
-│   │       ├── Account.cs
+│   │   └── Identites
 │   │       └── IAccount.cs
 │   ├── obj
 │   │   ├── Application.csproj.nuget.dgspec.json
@@ -81,51 +32,25 @@
 │   │   ├── Application.csproj.nuget.g.targets
 │   │   ├── Debug
 │   │   │   └── net8.0
-│   │   │       ├── apphost
 │   │   │       ├── Application.AssemblyInfo.cs
 │   │   │       ├── Application.AssemblyInfoInputs.cache
 │   │   │       ├── Application.assets.cache
 │   │   │       ├── Application.csproj.AssemblyReference.cache
-│   │   │       ├── Application.csproj.CopyComplete
-│   │   │       ├── Application.csproj.CoreCompileInputs.cache
-│   │   │       ├── Application.csproj.FileListAbsolute.txt
-│   │   │       ├── Application.dll
 │   │   │       ├── Application.GeneratedMSBuildEditorConfig.editorconfig
-│   │   │       ├── Application.genruntimeconfig.cache
 │   │   │       ├── Application.GlobalUsings.g.cs
-│   │   │       ├── Application.MvcApplicationPartsAssemblyInfo.cache
-│   │   │       ├── Application.pdb
-│   │   │       ├── Application.sourcelink.json
 │   │   │       ├── ref
-│   │   │       │   └── Application.dll
-│   │   │       ├── refint
-│   │   │       │   └── Application.dll
-│   │   │       ├── staticwebassets
-│   │   │       │   ├── msbuild.build.Application.props
-│   │   │       │   ├── msbuild.buildMultiTargeting.Application.props
-│   │   │       │   └── msbuild.buildTransitive.Application.props
-│   │   │       └── staticwebassets.build.json
+│   │   │       └── refint
 │   │   ├── project.assets.json
 │   │   └── project.nuget.cache
-│   ├── Program.cs
-│   ├── Properties
-│   │   ├── Interface
-│   │   └── launchSettings.json
-│   ├── Services
-│   └── structure.txt
+│   └── Service
+│       ├── IAccountService.cs
+│       └── Identity
+│           └── AccountService.cs
 ├── Domain
-│   ├── appsettings.Development.json
-│   ├── appsettings.json
 │   ├── bin
 │   │   └── Debug
 │   │       └── net8.0
-│   │           ├── appsettings.Development.json
-│   │           ├── appsettings.json
-│   │           ├── Domain
-│   │           ├── Domain.deps.json
-│   │           ├── Domain.dll
-│   │           ├── Domain.pdb
-│   │           └── Domain.runtimeconfig.json
+│   ├── Class1.cs
 │   ├── Domain.csproj
 │   ├── Entities
 │   │   ├── ActivityTracker
@@ -138,72 +63,31 @@
 │   │   │   └── Order.cs
 │   │   └── Products
 │   │       └── Products.cs
-│   ├── obj
-│   │   ├── Debug
-│   │   │   └── net8.0
-│   │   │       ├── apphost
-│   │   │       ├── Domain.AssemblyInfo.cs
-│   │   │       ├── Domain.AssemblyInfoInputs.cache
-│   │   │       ├── Domain.assets.cache
-│   │   │       ├── Domain.csproj.CoreCompileInputs.cache
-│   │   │       ├── Domain.csproj.FileListAbsolute.txt
-│   │   │       ├── Domain.dll
-│   │   │       ├── Domain.GeneratedMSBuildEditorConfig.editorconfig
-│   │   │       ├── Domain.genruntimeconfig.cache
-│   │   │       ├── Domain.GlobalUsings.g.cs
-│   │   │       ├── Domain.MvcApplicationPartsAssemblyInfo.cache
-│   │   │       ├── Domain.pdb
-│   │   │       ├── Domain.sourcelink.json
-│   │   │       ├── ref
-│   │   │       │   └── Domain.dll
-│   │   │       ├── refint
-│   │   │       │   └── Domain.dll
-│   │   │       ├── staticwebassets
-│   │   │       │   ├── msbuild.build.Domain.props
-│   │   │       │   ├── msbuild.buildMultiTargeting.Domain.props
-│   │   │       │   └── msbuild.buildTransitive.Domain.props
-│   │   │       └── staticwebassets.build.json
-│   │   ├── Domain.csproj.nuget.dgspec.json
-│   │   ├── Domain.csproj.nuget.g.props
-│   │   ├── Domain.csproj.nuget.g.targets
-│   │   ├── project.assets.json
-│   │   └── project.nuget.cache
-│   ├── Program.cs
-│   ├── Properties
-│   │   └── launchSettings.json
-│   └── structure.txt
+│   └── obj
+│       ├── Debug
+│       │   └── net8.0
+│       │       ├── Domain.AssemblyInfo.cs
+│       │       ├── Domain.AssemblyInfoInputs.cache
+│       │       ├── Domain.assets.cache
+│       │       ├── Domain.GeneratedMSBuildEditorConfig.editorconfig
+│       │       ├── Domain.GlobalUsings.g.cs
+│       │       ├── ref
+│       │       └── refint
+│       ├── Domain.csproj.nuget.dgspec.json
+│       ├── Domain.csproj.nuget.g.props
+│       ├── Domain.csproj.nuget.g.targets
+│       ├── project.assets.json
+│       └── project.nuget.cache
 ├── Infrastructure
-│   ├── appsettings.Development.json
-│   ├── appsettings.json
 │   ├── bin
 │   │   └── Debug
 │   │       └── net8.0
-│   │           ├── Application
-│   │           ├── Application.deps.json
-│   │           ├── Application.dll
-│   │           ├── Application.pdb
-│   │           ├── Application.runtimeconfig.json
-│   │           ├── appsettings.Development.json
-│   │           ├── appsettings.json
-│   │           ├── Domain
-│   │           ├── Domain.deps.json
-│   │           ├── Domain.dll
-│   │           ├── Domain.pdb
-│   │           ├── Domain.runtimeconfig.json
-│   │           ├── Infrastructure.deps.json
-│   │           ├── Infrastructure.dll
-│   │           └── Infrastructure.pdb
+│   ├── Class1.cs
 │   ├── DataAccess
-│   │   ├── AppDbContext.cs
-│   │   └── DesignTimeDbContextFactory.cs
+│   │   └── AppDbContext.cs
 │   ├── DependancyInjection
-│   │   ├── ServiceContainer.cs
-│   │   └── ServiceExtensions.cs
+│   │   └── ServiceContainer.cs
 │   ├── Infrastructure.csproj
-│   ├── Migrations
-│   │   ├── 20250315064030_InitialCreate.cs
-│   │   ├── 20250315064030_InitialCreate.Designer.cs
-│   │   └── AppDbContextModelSnapshot.cs
 │   ├── obj
 │   │   ├── Debug
 │   │   │   └── net8.0
@@ -211,30 +95,18 @@
 │   │   │       ├── Infrastructure.AssemblyInfoInputs.cache
 │   │   │       ├── Infrastructure.assets.cache
 │   │   │       ├── Infrastructure.csproj.AssemblyReference.cache
-│   │   │       ├── Infrastructure.csproj.CopyComplete
-│   │   │       ├── Infrastructure.csproj.CoreCompileInputs.cache
-│   │   │       ├── Infrastructure.csproj.FileListAbsolute.txt
-│   │   │       ├── Infrastructure.dll
 │   │   │       ├── Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 │   │   │       ├── Infrastructure.GlobalUsings.g.cs
-│   │   │       ├── Infrastructure.pdb
-│   │   │       ├── Infrastructure.sourcelink.json
 │   │   │       ├── ref
-│   │   │       │   └── Infrastructure.dll
 │   │   │       └── refint
-│   │   │           └── Infrastructure.dll
-│   │   ├── Infrastructure.csproj.EntityFrameworkCore.targets
 │   │   ├── Infrastructure.csproj.nuget.dgspec.json
 │   │   ├── Infrastructure.csproj.nuget.g.props
 │   │   ├── Infrastructure.csproj.nuget.g.targets
 │   │   ├── project.assets.json
 │   │   └── project.nuget.cache
-│   ├── Program.cs
-│   ├── Properties
-│   │   └── launchSettings.json
 │   └── Repository
 │       └── Account.cs
-├── InventorySystem.sln
+├── InventoryManagmntSys.sln
 ├── structure.txt
 └── WebUI
     ├── appsettings.Development.json
@@ -242,198 +114,37 @@
     ├── bin
     │   └── Debug
     │       └── net8.0
-    │           ├── Application
-    │           ├── Application.deps.json
-    │           ├── Application.dll
-    │           ├── Application.pdb
-    │           ├── Application.runtimeconfig.json
     │           ├── appsettings.Development.json
     │           ├── appsettings.json
-    │           ├── cs
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── de
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── Domain
-    │           ├── Domain.deps.json
-    │           ├── Domain.dll
-    │           ├── Domain.pdb
-    │           ├── Domain.runtimeconfig.json
-    │           ├── es
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── fr
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── Humanizer.dll
-    │           ├── Infrastructure.dll
-    │           ├── Infrastructure.pdb
-    │           ├── it
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── ja
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── ko
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── libman.json
-    │           ├── Mapster.Core.dll
-    │           ├── Mapster.dll
-    │           ├── MediatR.Contracts.dll
-    │           ├── MediatR.dll
-    │           ├── Meziantou.Framework.ByteSize.dll
-    │           ├── Meziantou.Framework.dll
-    │           ├── Microsoft.AspNetCore.Authorization.dll
-    │           ├── Microsoft.AspNetCore.Components.dll
-    │           ├── Microsoft.AspNetCore.Components.Forms.dll
-    │           ├── Microsoft.AspNetCore.Components.Web.dll
-    │           ├── Microsoft.AspNetCore.Connections.Abstractions.dll
-    │           ├── Microsoft.AspNetCore.Cryptography.Internal.dll
-    │           ├── Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-    │           ├── Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-    │           ├── Microsoft.AspNetCore.Identity.UI.dll
-    │           ├── Microsoft.AspNetCore.Metadata.dll
-    │           ├── Microsoft.AspNetCore.SignalR.Client.Core.dll
-    │           ├── Microsoft.AspNetCore.SignalR.Common.dll
-    │           ├── Microsoft.AspNetCore.SignalR.Protocols.Json.dll
-    │           ├── Microsoft.Bcl.AsyncInterfaces.dll
-    │           ├── Microsoft.CodeAnalysis.CSharp.dll
-    │           ├── Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-    │           ├── Microsoft.CodeAnalysis.dll
-    │           ├── Microsoft.CodeAnalysis.Workspaces.dll
-    │           ├── Microsoft.EntityFrameworkCore.Abstractions.dll
-    │           ├── Microsoft.EntityFrameworkCore.Design.dll
-    │           ├── Microsoft.EntityFrameworkCore.dll
-    │           ├── Microsoft.EntityFrameworkCore.Relational.dll
-    │           ├── Microsoft.Extensions.Caching.Memory.dll
-    │           ├── Microsoft.Extensions.DependencyInjection.Abstractions.dll
-    │           ├── Microsoft.Extensions.DependencyInjection.dll
-    │           ├── Microsoft.Extensions.DependencyModel.dll
-    │           ├── Microsoft.Extensions.Features.dll
-    │           ├── Microsoft.Extensions.FileProviders.Embedded.dll
-    │           ├── Microsoft.Extensions.Identity.Core.dll
-    │           ├── Microsoft.Extensions.Identity.Stores.dll
-    │           ├── Microsoft.Extensions.Localization.Abstractions.dll
-    │           ├── Microsoft.Extensions.Localization.dll
-    │           ├── Microsoft.Extensions.Logging.Abstractions.dll
-    │           ├── Microsoft.Extensions.Logging.dll
-    │           ├── Microsoft.Extensions.Options.dll
-    │           ├── Microsoft.JSInterop.dll
-    │           ├── Microsoft.OpenApi.dll
-    │           ├── Mono.TextTemplating.dll
-    │           ├── MudBlazor.dll
-    │           ├── MySqlConnector.dll
-    │           ├── NetcodeHub.Packages.Components.BreadCrumb.dll
-    │           ├── NetcodeHub.Packages.Components.DataGrid.dll
-    │           ├── NetcodeHub.Packages.Components.FileUpload.dll
-    │           ├── NetcodeHub.Packages.Components.Modal.dll
-    │           ├── NetcodeHub.Packages.Components.Toast.dll
-    │           ├── NetcodeHub.Packages.Components.Validations.dll
-    │           ├── NetcodeHub.Packages.Extensions.Attributes.RequiredGuid.dll
-    │           ├── NetcodeHub.Packages.Extensions.LocalStorage.dll
-    │           ├── NetcodeHub.Packages.UI.Templates.Breeze.dll
-    │           ├── pl
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── Pomelo.EntityFrameworkCore.MySql.dll
-    │           ├── pt-BR
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── ru
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           ├── runtimes
-    │           │   ├── unix
-    │           │   │   └── lib
-    │           │   │       └── net6.0
-    │           │   ├── win
-    │           │   │   └── lib
-    │           │   │       └── net6.0
-    │           │   ├── win-arm
-    │           │   │   └── native
-    │           │   ├── win-arm64
-    │           │   │   └── native
-    │           │   ├── win-x64
-    │           │   │   └── native
-    │           │   └── win-x86
-    │           │       └── native
-    │           ├── Swashbuckle.AspNetCore.Swagger.dll
-    │           ├── Swashbuckle.AspNetCore.SwaggerGen.dll
-    │           ├── Swashbuckle.AspNetCore.SwaggerUI.dll
-    │           ├── Syncfusion.Blazor.Buttons.dll
-    │           ├── Syncfusion.Blazor.Calendars.dll
-    │           ├── Syncfusion.Blazor.Charts.dll
-    │           ├── Syncfusion.Blazor.Core.dll
-    │           ├── Syncfusion.Blazor.Data.dll
-    │           ├── Syncfusion.Blazor.DataVizCommon.dll
-    │           ├── Syncfusion.Blazor.DropDowns.dll
-    │           ├── Syncfusion.Blazor.Grids.dll
-    │           ├── Syncfusion.Blazor.Inputs.dll
-    │           ├── Syncfusion.Blazor.Lists.dll
-    │           ├── Syncfusion.Blazor.Navigations.dll
-    │           ├── Syncfusion.Blazor.Notifications.dll
-    │           ├── Syncfusion.Blazor.Popups.dll
-    │           ├── Syncfusion.Blazor.Spinner.dll
-    │           ├── Syncfusion.Blazor.SplitButtons.dll
-    │           ├── Syncfusion.Blazor.Themes.dll
-    │           ├── Syncfusion.ExcelExport.Net.dll
-    │           ├── Syncfusion.Licensing.dll
-    │           ├── Syncfusion.PdfExport.Net.dll
-    │           ├── System.CodeDom.dll
-    │           ├── System.Composition.AttributedModel.dll
-    │           ├── System.Composition.Convention.dll
-    │           ├── System.Composition.Hosting.dll
-    │           ├── System.Composition.Runtime.dll
-    │           ├── System.Composition.TypedParts.dll
-    │           ├── tr
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
     │           ├── WebUI
     │           ├── WebUI.deps.json
     │           ├── WebUI.dll
     │           ├── WebUI.pdb
     │           ├── WebUI.runtimeconfig.json
-    │           ├── WebUI.staticwebassets.runtime.json
-    │           ├── zh-Hans
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │           │   ├── Microsoft.CodeAnalysis.resources.dll
-    │           │   └── Microsoft.CodeAnalysis.Workspaces.resources.dll
-    │           └── zh-Hant
-    │               ├── Microsoft.CodeAnalysis.CSharp.resources.dll
-    │               ├── Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-    │               ├── Microsoft.CodeAnalysis.resources.dll
-    │               └── Microsoft.CodeAnalysis.Workspaces.resources.dll
+    │           └── WebUI.staticwebassets.runtime.json
     ├── Components
-    ├── Hubs
-    │   └── YourSignalRHub.cs
-    ├── Interfaces
-    │   └── ICustomAuthorizationService.cs
-    ├── libman.json
+    │   ├── App.razor
+    │   ├── Layout
+    │   │   ├── Identity
+    │   │   │   ├── AuthenticationLayout.razor
+    │   │   │   ├── IdentityRevalidatingAuthStateProvider.cs
+    │   │   │   └── SignOutEndpoint.cs
+    │   │   ├── MainLayout.razor
+    │   │   ├── MainLayout.razor.css
+    │   │   ├── NavMenu.razor
+    │   │   └── NavMenu.razor.css
+    │   ├── Pages
+    │   │   ├── Counter.razor
+    │   │   ├── Error.razor
+    │   │   ├── Home.razor
+    │   │   ├── Identity
+    │   │   │   ├── AccessDenied.razor
+    │   │   │   ├── AuthenticationState.razor
+    │   │   │   ├── _Imports.razor
+    │   │   │   ├── LoginPage.razor
+    │   │   │   └── RedirectToLogin.razor
+    │   │   └── Weather.razor
+    │   └── Routes.razor
     ├── obj
     │   ├── Debug
     │   │   └── net8.0
@@ -443,19 +154,26 @@
     │   │       ├── refint
     │   │       │   └── WebUI.dll
     │   │       ├── scopedcss
-    │   │       │   └── bundle
-    │   │       │       └── WebUI.styles.css
+    │   │       │   ├── bundle
+    │   │       │   │   └── WebUI.styles.css
+    │   │       │   ├── Components
+    │   │       │   │   └── Layout
+    │   │       │   │       ├── MainLayout.razor.rz.scp.css
+    │   │       │   │       └── NavMenu.razor.rz.scp.css
+    │   │       │   └── projectbundle
+    │   │       │       └── WebUI.bundle.scp.css
     │   │       ├── staticwebassets
     │   │       │   ├── msbuild.buildMultiTargeting.WebUI.props
     │   │       │   ├── msbuild.buildTransitive.WebUI.props
-    │   │       │   └── msbuild.build.WebUI.props
+    │   │       │   ├── msbuild.build.WebUI.props
+    │   │       │   └── msbuild.WebUI.Microsoft.AspNetCore.StaticWebAssets.props
     │   │       ├── staticwebassets.build.json
     │   │       ├── staticwebassets.development.json
+    │   │       ├── staticwebassets.pack.json
     │   │       ├── WebUI.AssemblyInfo.cs
     │   │       ├── WebUI.AssemblyInfoInputs.cache
     │   │       ├── WebUI.assets.cache
     │   │       ├── WebUI.csproj.AssemblyReference.cache
-    │   │       ├── WebUI.csproj.CopyComplete
     │   │       ├── WebUI.csproj.CoreCompileInputs.cache
     │   │       ├── WebUI.csproj.FileListAbsolute.txt
     │   │       ├── WebUI.dll
@@ -463,25 +181,21 @@
     │   │       ├── WebUI.genruntimeconfig.cache
     │   │       ├── WebUI.GlobalUsings.g.cs
     │   │       ├── WebUI.MvcApplicationPartsAssemblyInfo.cache
-    │   │       ├── WebUI.MvcApplicationPartsAssemblyInfo.cs
-    │   │       ├── WebUI.pdb
-    │   │       └── WebUI.sourcelink.json
+    │   │       └── WebUI.pdb
     │   ├── project.assets.json
     │   ├── project.nuget.cache
-    │   ├── WebUI.csproj.EntityFrameworkCore.targets
     │   ├── WebUI.csproj.nuget.dgspec.json
     │   ├── WebUI.csproj.nuget.g.props
     │   └── WebUI.csproj.nuget.g.targets
     ├── Program.cs
     ├── Properties
     │   └── launchSettings.json
-    ├── Services
-    │   └── NetcodeHubConnectionService.cs
-    ├── States
-    │   ├── ChangePasswordState.cs
-    │   └── UserActiveOrderCountState.cs
     ├── WebUI.csproj
-    ├── WebUI.http
     └── wwwroot
+        ├── app.css
+        ├── bootstrap
+        │   ├── bootstrap.min.css
+        │   └── bootstrap.min.css.map
+        └── favicon.png
 
-114 directories, 371 files
+72 directories, 127 files

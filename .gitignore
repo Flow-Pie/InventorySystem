@@ -1,0 +1,48 @@
+# Ignore build artifacts
+bin/
+obj/
+
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userprefs
+
+# Ignore IDE-specific files
+.vs/
+.idea/
+.vscode/
+
+# Ignore NuGet packages and cache
+.nuget/
+packages/
+*.nupkg
+project.assets.json
+project.nuget.cache
+
+# Ignore build output
+*.dll
+*.pdb
+*.exe
+*.cache
+
+# Ignore static web assets
+wwwroot/lib/
+
+# Ignore logs and diagnostics
+logs/
+*.log
+*.tlog
+
+# Ignore temp files
+temp/
+tmp/
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore local development environment files
+.env
+.env.local
+.env.development
+.env.production

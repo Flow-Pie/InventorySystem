@@ -2,8 +2,6 @@ namespace  Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Application.Extension.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Domain.Entities.ActivityTracker;
-using Domain.Entities.Location;
 using Domain.Entities;
 
 

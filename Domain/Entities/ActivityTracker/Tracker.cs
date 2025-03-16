@@ -1,4 +1,4 @@
-namespace Domain.Entities.ActivityTracker;
+namespace Domain.Entities;
 
 public class Tracker
 {

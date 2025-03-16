@@ -1,12 +1,12 @@
 using System.Diagnostics;
 using System.Security.Claims;
-using Application.DTO.Request.ActivityTracker;
+// using Application.DTO.Request.ActivityTracker;
 using Application.DTO.Request.Identity;
 using Application.DTO.Response;
 using Application.DTO.Response.Identity;
 using Application.Extension.Identity;
 using Application.Interfaces.Identity;
-using Domain.Entities.ActivityTracker;
+// using Domain.Entities.ActivityTracker;
 using Infrastructure.DataAccess;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
@@ -39,17 +39,18 @@ public class Account : IAccount
         var newUser = new ApplicationUser
         {
             UserName = model.Email,
-            PasswordHash = model.PasswordHash,
             Email = model.Email,
             Name = model.Name
         };
 
-        var result = CheckResult(await _userManager.CreateAsync(newUser, model.PasswordHash));
+        // Pass the plain text password to CreateAsync
+        var result = CheckResult(await _userManager.CreateAsync(newUser, model.Password));
         if (!result.Flag)
             return result;
         else
             return await CreateUserClaims(model);
     }
+
 
     private async Task<ServiceResponse> CreateUserClaims(CreateUserRequestDTO model)
     {
@@ -163,13 +164,34 @@ public class Account : IAccount
         return UserList;
     }
 
-    public async Task SetUpAsync() => await CreateUserAsync(new CreateUserRequestDTO()
+    public async Task SetUpAsync()
     {
-        Name = "Administrator",
-        Email = "admin@admin.com",
-        Password = "Admin@123",
-        Policy = Policy.AdminPolicy
-    });
+        var adminEmail = "admin@admin.com";
+        var adminUser = await FindUserByEmail(adminEmail);
+
+        if (adminUser == null)
+        {
+            var createUserModel = new CreateUserRequestDTO
+            {
+                Name = "Administrator",
+                Email = adminEmail,
+                Password = "Admin@123", 
+                Policy = Policy.AdminPolicy
+            };
+
+            var result = await CreateUserAsync(createUserModel);
+            if (!result.Flag)
+            {
+                // Log the error or handle it as needed
+                throw new Exception($"Failed to create admin user: {result.Message}");
+            }
+        }
+        else
+        {
+            // Log that the admin user already exists
+            Console.WriteLine("Admin user already exists.");
+        }
+    }
 
     public async Task<ServiceResponse> UpdateUserAsync(ChangeUserClaimRequestDTO model)
     {
@@ -202,20 +224,20 @@ public class Account : IAccount
         return Outcome;
     }
 
-    public async Task<IEnumerable<ActivityTrackerResponseDTO>> GetActivityAsync()
-    {
-        var data = (await _context.ActivityTracker.ToListAsync()).Adapt<List<ActivityTrackerResponseDTO>>();
+    // public async Task<IEnumerable<ActivityTrackerResponseDTO>> GetActivityAsync()
+    // {
+    //     var data = (await _context.ActivityTracker.ToListAsync()).Adapt<List<ActivityTrackerResponseDTO>>();
 
-        foreach (var activity in data)
-        {
-            activity.Username = (await FindUserById(activity.UserId)).Name;
-        }
+    //     foreach (var activity in data)
+    //     {
+    //         activity.Username = (await FindUserById(activity.UserId)).Name;
+    //     }
 
-        return data;
-    }
+    //     return data;
+    // }
 
-    public Task SaveActivityAsync(ActivityTrackerRequestDTO model)
-    {
-        throw new NotImplementedException();
-    }
+    // public Task SaveActivityAsync(ActivityTrackerRequestDTO model)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }
