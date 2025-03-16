@@ -46,3 +46,4 @@ tmp/
 .env.local
 .env.development
 .env.production
+.fake

@@ -1,31 +1,42 @@
 @page "/account/login"
 @using Application.DTO.Request.Identity
 <EditForm Model="LoginModel" method="post" OnValidSubmit="LoginAsync" FormName="login" Enhance>
-    <div class="card border-primary shadow-lg text-dark p-5" style="border-radius: 24px; min-width: 300px;">
-        <div class="card-header text-dark fs-4 border-primary">Login</div>
-        <div class="card-body" style="opacity: 1">
+    <div class="card border-primary shadow-lg text-dark p-4 mt-5 mb-3 mx-auto" style="border-radius: 24px; max-width: 400px;">
+        <div class="card-header text-dark fs-4 border-primary text-center">Login</div>
+        <div class="card-body">
             <DataAnnotationsValidator />
-            <div class="form=floating mb-3">
+            
+            <!-- Email Input -->
+            <div class="form-floating mb-3">
                 <InputText @bind-Value="LoginModel.Email" class="form-control" id="Email" autocomplete="username" placeholder="Email" />
-                <label for="email" class="form-label">Email Address</label>                
+                <label for="Email" class="form-label">Email Address</label>
             </div>
-            <div class="form=floating mb-3">
-                <InputText @bind-Value="LoginModel.Password" class="form-control" id="Password" placeholder="Password" />
-                <label for="password" class="form-label">Password</label>
+
+            <!-- Password Input -->
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="LoginModel.Password" type="password" class="form-control" id="Password" placeholder="Password" />
+                <label for="Password" class="form-label">Password</label>
             </div>
-            <div class="=form-group align-content-end">
-                <button type="submit" class="float-end btn btn-primary mt-4 w-50" style="">Login</button>
+
+            <!-- Login Button -->
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary mt-3 w-100">Login</button>
             </div>
-            <hr class="text-primary" />
+
+            <hr class="text-primary my-4" />
         </div>
-        <div class="card-footer mt-5">
-            @if(@ErrorMessage != "")
+
+        <!-- Error Message or Validation Summary -->
+        <div class="card-footer text-center">
+            @if (!string.IsNullOrEmpty(ErrorMessage))
             {
                 <div class="alert alert-danger" role="alert">
                     @ErrorMessage
                 </div>
-            }else{
-                <ValidationSummary class="form-control text-danger text-decoration-none" />
+            }
+            else
+            {
+                <ValidationSummary class="text-danger" />
             }
         </div>
     </div>

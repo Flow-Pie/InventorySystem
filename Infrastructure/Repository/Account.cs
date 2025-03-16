@@ -1,12 +1,14 @@
 using System.Diagnostics;
 using System.Security.Claims;
-// using Application.DTO.Request.ActivityTracker;
+using Application.DTO.Request.ActivityTracker;
 using Application.DTO.Request.Identity;
 using Application.DTO.Response;
+using Application.DTO.Response.ActivityTracker;
 using Application.DTO.Response.Identity;
 using Application.Extension.Identity;
 using Application.Interfaces.Identity;
-// using Domain.Entities.ActivityTracker;
+using Domain.Entities;
+
 using Infrastructure.DataAccess;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
@@ -182,7 +184,7 @@ public class Account : IAccount
             var result = await CreateUserAsync(createUserModel);
             if (!result.Flag)
             {
-                // Log the error or handle it as needed
+                // Log the error
                 throw new Exception($"Failed to create admin user: {result.Message}");
             }
         }
@@ -222,22 +224,31 @@ public class Account : IAccount
         if (Outcome.Flag)
             return new ServiceResponse(true, "User Updated Successfully");
         return Outcome;
+    }   
+
+    public async Task SaveActivityAsync(ActivityTrackerRequestDTO model)
+    {
+        _context.ActivityTracker.Add(model.Adapt(new Tracker()));
+        await _context.SaveChangesAsync();
     }
 
-    // public async Task<IEnumerable<ActivityTrackerResponseDTO>> GetActivityAsync()
-    // {
-    //     var data = (await _context.ActivityTracker.ToListAsync()).Adapt<List<ActivityTrackerResponseDTO>>();
+    public async Task<List<ActivityTrackerResponseDTO>> GetActivitiesAsync()
+    {
+        var activities = await _context.ActivityTracker.ToListAsync();
+        
+        var userIds = activities.Select(a => a.UserId).Distinct().ToList();
+        
+        var users = await _userManager.Users
+            .Where(u => userIds.Contains(u.Id))
+            .ToDictionaryAsync(u => u.Id, u => u.Name);
 
-    //     foreach (var activity in data)
-    //     {
-    //         activity.Username = (await FindUserById(activity.UserId)).Name;
-    //     }
+        var result = activities.Select(activity => new ActivityTrackerResponseDTO
+        {
+            UserName = users.TryGetValue(activity.UserId, out var name) ? name : "Unknown"
+        }).ToList();
 
-    //     return data;
-    // }
+        return result;  // No need for IEnumerator, return List<T> directly
+    }
 
-    // public Task SaveActivityAsync(ActivityTrackerRequestDTO model)
-    // {
-    //     throw new NotImplementedException();
-    // }
+    
 }

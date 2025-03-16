@@ -25,6 +25,14 @@
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
             </NavLink>
         </div>
+        <div class="nav-item px-3">
+            <form action="account/signout" method="post" class="mb-2">
+               <AntiforgeryToken/>
+               <button type="submit" class="nav-link fw-bold text-danger">
+                   <i  class="bi bi-box-arrow-right text-danger"></i> Logout
+               </button>
+            </form>
+        </div>
     </nav>
 </div>
 

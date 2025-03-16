@@ -7,6 +7,7 @@ using WebUI.Components.Identity;
 using Application.Services;
 using Application.Services.Identity;
 using Application.Interfaces.Identity;
+using WebUI.Components.Layout.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,7 +53,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
     app.UseHsts();
 }
-
+app.MapSignOutEndpoint();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
