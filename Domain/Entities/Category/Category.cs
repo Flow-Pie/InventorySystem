@@ -1,9 +1,10 @@
+using System.Text.Json.Serialization;
+
 namespace Domain.Entities
 {
-    public class Category
+    public class Category : ProductBase
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public List<Products> Products { get; set; }
+        [JsonIgnore]
+        public ICollection<Products> Products { get; set; } = null;
     }
 }

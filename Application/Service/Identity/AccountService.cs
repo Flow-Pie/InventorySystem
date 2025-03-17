@@ -1,6 +1,8 @@
 // using Application.DTO.Request.ActivityTracker;
+using Application.DTO.Request.ActivityTracker;
 using Application.DTO.Request.Identity;
 using Application.DTO.Response;
+using Application.DTO.Response.ActivityTracker;
 using Application.DTO.Response.Identity;
 using Application.Interfaces.Identity;
 
@@ -22,26 +24,21 @@ public class AccountService(IAccount account) : IAccountService
     public async Task<ServiceResponse> UpdateUserAsync(ChangeUserClaimRequestDTO model)
         => await account.UpdateUserAsync(model);
 
-    // private async Task<IEnumerator<ActivityTrackerResponseDTO>>GetActivitiesAsync()
-    //     =>await account.GetActivitiesAsync();
+    private async Task<IEnumerator<ActivityTrackerResponseDTO>> GetActivitiesAsync()
+        => (await account.GetActivitiesAsync()).GetEnumerator();
+    public async Task SaveActivityAsync(ActivityTrackerRequestDTO model)
+        => await account.SaveActivityAsync(model);
 
-    // public async Task SaveActivityAsync(ActivityTrackerRequestDTO model)
-    //     => await account.SaveActivityAsync(model);
-
-    // public async Task<IEnumerable<IGrouping<DateTime, ActivityTrackerResponseDTO>>> GetActivitiesByDateAsync()
-    //     {
-    //         var enumerator = await GetActivitiesAsync();
-    //         var activities = new List<ActivityTrackerResponseDTO>();
-    //         while (enumerator.MoveNext())
-    //         {
-    //             activities.Add(enumerator.Current);
-    //         }
-    //         var data = activities.GroupBy(e => e.Update).AsEnumerable();
-    //         return (IEnumerable<IGrouping<DateTime, ActivityTrackerResponseDTO>>)data;
-    //     }
-
-    // public Task<IEnumerable<IGrouping<DateTime, ActivityTrackerResponseDTO>>> GetActivitiesByDateAsync(string userId)
-    // {
-    //     throw new NotImplementedException();
-    // }
+    public async Task<IEnumerable<IGrouping<DateTime, ActivityTrackerResponseDTO>>> GetActivitiesByDateAsync()
+        {
+            var enumerator = await GetActivitiesAsync();
+            var activities = new List<ActivityTrackerResponseDTO>();
+            while (enumerator.MoveNext())
+            {
+                activities.Add(enumerator.Current);
+            }
+            var data = activities.GroupBy(e => e.Date).AsEnumerable();
+            return (IEnumerable<IGrouping<DateTime, ActivityTrackerResponseDTO>>)data;
+        }
+   
 }

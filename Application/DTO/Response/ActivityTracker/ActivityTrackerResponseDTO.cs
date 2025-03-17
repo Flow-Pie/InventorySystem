@@ -6,4 +6,8 @@ public class ActivityTrackerResponseDTO
   
     [Required]
     public string UserName { get; set; }
+
+    [Required]
+    public DateTime Date { get; set; }
+    
 }

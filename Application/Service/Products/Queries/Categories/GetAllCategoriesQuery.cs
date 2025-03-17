@@ -1,0 +1,1 @@
+namespace Application.Products.Queries.Categories;

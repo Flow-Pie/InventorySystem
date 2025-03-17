@@ -1,11 +1,24 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain.Entities
 {
     public class Products
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public Guid Id { get; set; }=Guid.NewGuid();
+       public Category Category { get; set; } = null;
+       public Guid CategoryId { get; set; }
+       public Location Location { get; set; } = null;
+       public Guid LocationId { get; set; }
+       [DataType(DataType.Currency)]
         public decimal Price { get; set; }
-        public int CategoryId { get; set; }
-        public Category Category { get; set; } 
+        public int Quantity { get; set; }
+        public string SerialNumber { get; set; }
+        public string Description { get; set; }
+        public string Base64Image { get; set; }
+        public string Name { get; set; }
+
+
+
+
     }
 }
