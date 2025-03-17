@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Products.Queries.Locations;
 
-public class GetAllLocationQuery : IRequest<IEnumerable<GetLocationResponseDTO>>
+public class GetAllLocationsQuery : IRequest<IEnumerable<GetLocationResponseDTO>>
 {
     
 }
