@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Products.Queries.Categories;
 
-public class  GetAllCategoriesQuery : IRequest<IEnumerable<GetCategoryResponseDTO>>
+public class GetCategoriesWithProductQuery : IRequest<IEnumerable<GetCategoryResponseDTO>>
 {
     
 }
