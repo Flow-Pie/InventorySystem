@@ -15,19 +15,11 @@ public static class ServiceContainer
     {
         // Register DbContext with MySQL Server
         services.AddDbContext<AppDbContext>(options =>
-            options.UseMySql(config.GetConnectionString("DefaultConnection"), 
-                ServerVersion.AutoDetect(config.GetConnectionString("DefaultConnection")),
-                b => b.MigrationsAssembly("Infrastructure") 
-            ));
-
-        // Register DbContextFactory 
-        services.AddDbContextFactory<AppDbContext>(options =>
-            options.UseMySql(config.GetConnectionString("DefaultConnection"), 
-                ServerVersion.AutoDetect(config.GetConnectionString("DefaultConnection")),
-                b => b.MigrationsAssembly("Infrastructure") 
-            ),
-            ServiceLifetime.Scoped 
-        );
+        options.UseMySql(config.GetConnectionString("DefaultConnection"), 
+            ServerVersion.AutoDetect(config.GetConnectionString("DefaultConnection")),
+            b => b.MigrationsAssembly("Infrastructure") 
+        ), ServiceLifetime.Scoped);
+       
 
         // Configure Authentication
         services.AddAuthentication(options =>
@@ -59,6 +51,15 @@ public static class ServiceContainer
 
         // Register MediatR
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateProductHandler).Assembly));
+
+         // Register DbContextFactory 
+        services.AddDbContextFactory<AppDbContext>(options =>
+            options.UseMySql(config.GetConnectionString("DefaultConnection"), 
+                ServerVersion.AutoDetect(config.GetConnectionString("DefaultConnection")),
+                b => b.MigrationsAssembly("Infrastructure") 
+            ),
+            ServiceLifetime.Scoped 
+        );
 
         return services;
     }
