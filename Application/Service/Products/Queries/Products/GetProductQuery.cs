@@ -3,4 +3,7 @@ using MediatR;
 
 namespace Application.DTO.Response.Products;
 
-public class GetProductQuery : IRequest<IEnumerable<GetProductResponseDTO>> { }
+public class GetProductQuery : IRequest<IEnumerable<GetProductResponseDTO>>
+{
+    public Guid Id { get; set; }
+}

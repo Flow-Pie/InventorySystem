@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
-    public class Products
+    public class Product
     {
         public Guid Id { get; set; }=Guid.NewGuid();
        public Category Category { get; set; } = null;
@@ -11,6 +11,7 @@ namespace Domain.Entities
        public Guid LocationId { get; set; }
        [DataType(DataType.Currency)]
         public decimal Price { get; set; }
+        public DateTime DateAdded { get; set; }
         public int Quantity { get; set; }
         public string SerialNumber { get; set; }
         public string Description { get; set; }
