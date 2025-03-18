@@ -7,6 +7,7 @@ using Application.Extension.Identity;
 using Application.Interfaces.Identity;
 using MediatR;
 using Infrastructure.Repository;
+using Infrastructure.Repository.Products.Handlers.Products;
 
 public static class ServiceContainer
 {
@@ -57,7 +58,7 @@ public static class ServiceContainer
         services.AddScoped<IAccount, Account>();
 
         // Register MediatR
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(ServiceContainer).Assembly));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateProductHandler).Assembly));
 
         return services;
     }
